@@ -1,4 +1,4 @@
-name: Build App With Pake CLI
+name: Build App With Pake CLI-chess
 
 env:
   NODE_VERSION: "22"
@@ -194,7 +194,7 @@ jobs:
         uses: actions/upload-artifact@v6
         with:
           name: ${{ inputs.name }}-Windows
-          path: ./src-tauri/target/release/bundle/msi/*.msi
+          path: src-tauri/target/*/release/bundle/msi/*.msi
           retention-days: 3
 
       - name: Rust cache store
